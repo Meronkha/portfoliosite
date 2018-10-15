@@ -1,0 +1,44 @@
+/*belowHeader styling*/
+
+#divTitle {
+  padding: 15px;
+}
+
+#goku {
+  border-radius: 50%;
+  display: block;
+  width: 200px;
+  height: 200px;
+  border:7px solid #ffffff;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3px;
+  
+}
+
+#myInfo {
+  background-color: rgba(0,0,0,0.009);
+  padding: 0.5em;
+}
+
+#myQuote {
+  background-color: rgba(0,0,0,0.001);
+}
+
+#lineBreak {
+  border:1px solid #ffffff;
+  width: 26%;
+
+}
+
+#gitLogo {
+  width: 60px;
+  height: 60px;
+  padding: 10px;
+}
+
+#linkedinLogo {
+  width: 65px;
+  height: 60px;
+  padding: 10px;
+}

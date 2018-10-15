@@ -1,0 +1,21 @@
+/*contact styling*/
+
+#formSheet {
+  text-align: center;
+}
+
+#Submit {
+  right: 6%;
+  position: relative;
+  
+}
+
+#contactMe {
+  text-align: center;
+  font-family: 'Monda';
+  color: white;
+  padding: 5px;
+  letter-spacing: 2px;
+  
+  
+}
