@@ -1,9 +1,10 @@
 {
-  "main.css": "static/css/main.ad15bb54.css",
-  "main.css.map": "static/css/main.ad15bb54.css.map",
-  "main.js": "static/js/main.728c2ae6.js",
-  "main.js.map": "static/js/main.728c2ae6.js.map",
+  "main.css": "static/css/main.a97fec62.css",
+  "main.css.map": "static/css/main.a97fec62.css.map",
+  "main.js": "static/js/main.a093a486.js",
+  "main.js.map": "static/js/main.a093a486.js.map",
   "static\\media\\LLL.png": "static/media/LLL.2f804995.png",
+  "static\\media\\aa.png": "static/media/aa.f984eaaa.png",
   "static\\media\\background.jpg": "static/media/background.324716ec.jpg",
   "static\\media\\bg.png": "static/media/bg.73356d5d.png",
   "static\\media\\codepen2.png": "static/media/codepen2.df5a99db.png",
@@ -11,6 +12,5 @@
   "static\\media\\email.png": "static/media/email.59dac313.png",
   "static\\media\\linkedin-logo.png": "static/media/linkedin-logo.7fb99744.png",
   "static\\media\\me2.jpeg": "static/media/me2.a3278f0e.jpeg",
-  "static\\media\\ucl.jpeg": "static/media/ucl.ae636e74.jpeg",
   "static\\media\\ucl.jpg": "static/media/ucl.ff63cb0f.jpg"
 }
