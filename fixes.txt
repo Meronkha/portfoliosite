@@ -1,0 +1,5 @@
+$ Todo
+  Remove margin right
+  Mobile query
+  Msg pop up bottom of the page
+  Website exp
