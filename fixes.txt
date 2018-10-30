@@ -1,5 +1,6 @@
 $ Todo
   infographic needs to be variable
+  hover infographic
   Remove margin right
   Mobile query
   Msg pop up bottom of the page

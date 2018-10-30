@@ -1,8 +1,8 @@
 {
-  "main.css": "static/css/main.3009b373.css",
-  "main.css.map": "static/css/main.3009b373.css.map",
-  "main.js": "static/js/main.3e480046.js",
-  "main.js.map": "static/js/main.3e480046.js.map",
+  "main.css": "static/css/main.91dcbeb3.css",
+  "main.css.map": "static/css/main.91dcbeb3.css.map",
+  "main.js": "static/js/main.1e94c69c.js",
+  "main.js.map": "static/js/main.1e94c69c.js.map",
   "static\\media\\CSS3_logo.png": "static/media/CSS3_logo.747e0cdd.png",
   "static\\media\\DIN-Regular.ttf": "static/media/DIN-Regular.e0185b8d.ttf",
   "static\\media\\JS_Logo.png": "static/media/JS_Logo.637ccbf2.png",
@@ -21,6 +21,7 @@
   "static\\media\\nodejs2.png": "static/media/nodejs2.f8dab57d.png",
   "static\\media\\pyth.png": "static/media/pyth.ca2ceddc.png",
   "static\\media\\react.png": "static/media/react.61a7eeee.png",
+  "static\\media\\setings.png": "static/media/setings.33697f6b.png",
   "static\\media\\ucl3.jpg": "static/media/ucl3.bfebdb81.jpg",
   "static\\media\\website.jpg": "static/media/website.62c4f4e8.jpg"
 }
