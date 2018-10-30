@@ -1,59 +1,9 @@
 /*
 ===============================================
-|          DONT EDIT THIS SECTION             |
+|        NON-MOBILE DEVS          |
 ===============================================
 */
 
-
-.typewriter h1 {
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-   /* border-right: .005em solid black; /* The typwriter cursor */ */
-   /* border-left: 3em; */
-   white-space: nowrap; /* Keeps the content on a single line */
-   margin: 5; /* Gives that scrolling effect as the typing happens */
-   /* display:inline; */
-    /* Adjust as needed */
-   animation:
-     typing 2s steps(45, end),
-     blink-caret .75s step-end 2s;
-     /* blink-caret .95s step-end infinite; */
-  letter-spacing: .075em;
-}
-
-.typewriter h2 {
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-   /* border-left: 3em; */
-   white-space: nowrap; /* Keeps the content on a single line */
-   visibility: hidden;
-   margin: 5; /* Gives that scrolling effect as the typing happens */
-   /* display:inline; */
-    /* Adjust as needed */
-   animation:
-     /* typing 3.5s steps(100, end); */
-     typing2 1.8s steps(45, end);
-     /* blink-caret .95s step-end infinite; */
-  animation-fill-mode: forwards;
-  animation-delay: 0.5s;
-  letter-spacing: .075em;
-}
-
-.typewriter h2:default {
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-   border-right: .15em solid black; /* The typwriter cursor */
-   /* border-left: 3em; */
-   white-space: nowrap; /* Keeps the content on a single line */
-   visibility: visible;
-   margin: 5; /* Gives that scrolling effect as the typing happens */
-   /* display:inline; */
-    /* Adjust as needed */
-   animation:
-     /* typing 3.5s steps(100, end); */
-     typing2 3.5s steps(150, end);
-     /* blink-caret .95s step-end infinite; */
-  animation-fill-mode: forwards;
-  animation-delay: 0.5s;
-  letter-spacing: .075em;
-}
 
 .typewriter h3{
   overflow: hidden; /* Ensures the content is not revealed until the animation */
@@ -68,19 +18,171 @@
   -webkit-animation-fill-mode: backwards;
   animation:
    typing3 1.2s steps(500, end),
-   blink-caret .75s step-end infinite;
+   blink-caret .75s step-end;
    color: black;
   /* animation-delay: 7s; */
   animation-fill-mode: forwards;
-  letter-spacing: .075em;
-  animation-delay: 2.5s;
+  letter-spacing: .005em;
+  animation-delay: 0.2s;
     /* Adjust as needed */
 }
 
 .typewriter h3:default{
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   color: black;
+  visibility: visible;
+  border-right: .0.05em solid black; /* The typwriter cursor */
+  border-left: 0.01em;
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+   display:inline;
+  animation:
+   typing3 3.5s steps(150, end),
+   blink-caret .75s step-end;
+   color: none;
+  /* animation-delay: 7s; */
+  animation-fill-mode: forwards;
+  letter-spacing: .005em;
+  animation-delay: 0.2s;
+    /* Adjust as needed */
+}
 
+
+
+
+@keyframes typing3 {
+  to {
+    visibility: visible;
+  }
+  from { width: 0%}
+  to { width: 69.7% }
+}
+
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  44% { border-color: black; }
+}
+
+.pageMove {
+  padding-top: 40px;
+
+}
+#down {
+	filter: invert(25%);
+  width: 3.4vw;
+  height: 3.4vw;
+  opacity: 0;
+  transition: opacity 3s ease-in;
+  animation: breathe 4s infinite steps(100) alternate,
+  bobble 1s infinite steps(60) alternate;
+  animation-delay: 2.6s;
+}
+
+#down:hover{
+  filter: brightness(0) invert(0.5);
+}
+@keyframes bobble {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(5px); }
+}
+.lineBreak {
+  height: 1.2px;
+  background-color: black;
+  margin-top: 17px;
+  margin-left: 33vw;
+  margin-right: 36vw;
+  border-color: black;
+}
+
+@keyframes breathe {
+  0% { opacity: 0.2; }
+  100% { opacity: 1; }
+}
+
+/*
+            ===================
+            |  MOBILE DEVICES |
+            ===================
+*/
+
+
+@keyframes typing3M {
+  to {
+    visibility: visible;
+  }
+  from { width: 0%}
+  to { width: 85.7% }
+}
+
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  44% { border-color: black; }
+}
+
+
+
+
+
+.pageMoveM {
+  padding-top: 10vw;
+
+}
+#downM {
+	filter: invert(25%);
+  width: 17vw;
+  height: 17vw;
+  margin-top: 2vw;
+  animation: bobble 1s infinite steps(60) alternate;
+  animation-delay: 3.1s;
+}
+
+#downM:hover{
+  filter: brightness(0) invert(0.5);
+}
+@keyframes bobbleM {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(10px); }
+}
+.lineBreakM {
+  height: 0.6px;
+  /* padding-left:50px;
+  padding-right:50px; */
+  background-color: black;
+  margin-top: 17px;
+  margin-left: 25vw;
+  margin-right: 28vw;
+  border-color: black;
+}
+
+.typewriterM h3{
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  color: black;
+  visibility: hidden;
+  border-right: .05em solid black;
+  /* border-right: .15em solid black; /* The typwriter cursor */ */
+  border-left: 3em;
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+   /* display:inline; */
+  -webkit-animation-fill-mode: backwards;
+  animation:
+   typing3M 1.2s steps(500, end),
+   blink-caret .75s step-end infinite;
+   color: black;
+  /* animation-delay: 7s; */
+  animation-fill-mode: forwards;
+  letter-spacing: .005em;
+  animation-delay: 0.2s;
+    /* Adjust as needed */
+}
+
+.typewriterM h3:default{
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  color: black;
   visibility: visible;
   border-right: .0.05em solid black; /* The typwriter cursor */
   border-left: 0.01em;
@@ -93,188 +195,7 @@
    color: none;
   /* animation-delay: 7s; */
   animation-fill-mode: forwards;
-  letter-spacing: .075em;
-  animation-delay: 3.5s;
+  letter-spacing: .005em;
+  animation-delay: 0.2s;
     /* Adjust as needed */
-}
-
-.typewriterMob h1 {
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-   /* border-right: .005em solid black; /* The typwriter cursor */ */
-   /* border-left: 3em; */
-   white-space: nowrap; /* Keeps the content on a single line */
-   margin: 5; /* Gives that scrolling effect as the typing happens */
-   /* display:inline; */
-    /* Adjust as needed */
-   animation:
-     typing 2s steps(45, end),
-     blink-caret .75s step-end 2s;
-     /* blink-caret .95s step-end infinite; */
-  letter-spacing: .075em;
-}
-
-.typewriterMob h2 {
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-   /* border-left: 3em; */
-   white-space: nowrap; /* Keeps the content on a single line */
-   visibility: hidden;
-   margin: 5; /* Gives that scrolling effect as the typing happens */
-   /* display:inline; */
-    /* Adjust as needed */
-   animation:
-     /* typing 3.5s steps(100, end); */
-     typing2 1.8s steps(45, end);
-     /* blink-caret .95s step-end infinite; */
-  animation-fill-mode: forwards;
-  animation-delay: 0.5s;
-  letter-spacing: .075em;
-}
-
-.typewriterMob h2:default {
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-   border-right: .15em solid black; /* The typwriter cursor */
-   /* border-left: 3em; */
-   white-space: nowrap; /* Keeps the content on a single line */
-   visibility: visible;
-   margin: 5; /* Gives that scrolling effect as the typing happens */
-   /* display:inline; */
-    /* Adjust as needed */
-   animation:
-     /* typing 3.5s steps(100, end); */
-     typing2 3.5s steps(150, end);
-     /* blink-caret .95s step-end infinite; */
-  animation-fill-mode: forwards;
-  animation-delay: 0.5s;
-  letter-spacing: .075em;
-}
-
-.typewriterMob h3{
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  color: black;
-  visibility: hidden;
-  border-right: .05em solid black;
-  /* border-right: .15em solid black; /* The typwriter cursor */ */
-  border-left: 3em;
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  margin-left: -30px;
-   /* display:inline; */
-  -webkit-animation-fill-mode: backwards;
-  animation:
-   typing3mob 1.2s steps(500, end),
-   blink-caret .75s step-end infinite;
-   color: black;
-  /* animation-delay: 7s; */
-  animation-fill-mode: forwards;
-  letter-spacing: .075em;
-  animation-delay: 2.5s;
-    /* Adjust as needed */
-}
-
-.typewriterMob h3:default{
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  color: black;
-
-  visibility: visible;
-  border-right: .0.05em solid black; /* The typwriter cursor */
-  border-left: 0.01em;
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-   display:inline;
-  animation:
-   typing3mob 3.5s steps(150, end),
-   blink-caret .75s step-end infinite;
-   color: none;
-  /* animation-delay: 7s; */
-  animation-fill-mode: forwards;
-  letter-spacing: .075em;
-  animation-delay: 3.5s;
-    /* Adjust as needed */
-}
-
-
-
-
-@keyframes typing {
-  from { width: 0}
-  to { width: 90% }
-}
-
-@keyframes typing2 {
-  to {
-    visibility: visible;
-  }
-  from { width: 0}
-  to { width: 90% }
-  visibility: visible;
-}
-
-@keyframes typing3 {
-  to {
-    visibility: visible;
-  }
-  from { width: 0}
-  to { width: 94% }
-}
-@keyframes typing3mob {
-  to {
-    visibility: visible;
-  }
-  from { width: 0}
-  to { width: 84% }
-}
-
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  44% { border-color: black; }
-}
-
-/*
-===============================================
-|          DONT EDIT THIS SECTION             |
-===============================================
-*/
-
-
-.pageMove {
-  padding-top: 40px;
-
-}
-.pageMove img {
-	filter: invert(0%);
-  width: 90px;
-  height: 90px;
-  /* padding-top: 34px; */
-  animation: bobble 1s infinite steps(3) alternate;
-  animation-delay: 3.5s;
-}
-.pageMoveMob {
-  padding-top: 50px;
-
-}
-.pageMoveMob img {
-	filter: invert(0%);
-  width: 30px;
-  height: 30px;
-  /* padding-top: 34px; */
-  animation: bobbleMob 1s infinite steps(3) alternate;
-  animation-delay: 3.5s;
-}
-
-@keyframes bobble {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(300px); }
-}
-
-@keyframes bobbleMob {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(100px); }
-}
-.typewriter{
-  filter: grayscale(70%);
-}
-
-.typewriterMob{
-  filter: grayscale(60%);
 }

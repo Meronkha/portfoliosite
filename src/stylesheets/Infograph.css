@@ -1,0 +1,69 @@
+.skills {
+  position: relative;
+
+}
+@keyframes example {
+    0%   {margin-left: -700px;}
+    100% {margin-left: -1vw;}
+}
+.skills div {
+  position: absolute;
+  width: 14vw;
+  margin-top: -3vw;
+  animation-name: example;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  background-color: #0c1a2d;
+  margin-left: -100px;
+  height: 5vw;
+  border-radius: 10px;
+}
+
+.skills h1 {
+  text-align: center;
+  padding-left: 0.7vw;
+  font-weight: bold;
+  padding-top: 1.1vw;
+  overflow: hidden;
+  font-size: 2vw;
+  color: #e8efef;
+  letter-spacing: 0.1vw;
+  font-family: DinRegular;
+}
+#hide {
+  color: #e8efef;
+}
+@keyframes slide {
+    0% {width: 0;}
+    100% {width: 5vw; }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/*
+  Give the infogrpahic a shadow box upon hover
+*/
+.iconHover {
+  color: transparent;
+}
+
+.iconHover p {
+  margin-left: 2.4vw;
+}
+.iconHover:hover {
+  color: #0c1a2d;
+  font-weight: bold;
+  letter-spacing: 0.1vw;
+  font-family: DinRegular;
+}
+
+.iconHover:hover img {
+  opacity: 0.7;
+}

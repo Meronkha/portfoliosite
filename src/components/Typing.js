@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import '../stylesheets/Typing.css';
 import downArrow from '../icon/down.svg';
 import MediaQuery from 'react-responsive';
-import bg from '../images/bg.png';
 import Header from './Header';
 
 class Typing extends Component {
@@ -14,122 +13,110 @@ class Typing extends Component {
     }
 
   componentWillMount = () => {
-    setTimeout(() => {
-      this.show();
-      console.log('Now we wait...');
-    }, this.props.wait)
+    // do something
   };
+
+  handleClick = () => {
+    for(let i = 0; i < window.innerHeight; i++){
+      setTimeout(this.scroller(),100)
+    };
+  };
+
+  scroller = () => {
+    window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });
+  }
 
   show = () => {
     this.setState({render:true});
   }
 
+  animate = (id) => {
+    document.getElementById(id).style.opacity='1'
+  }
+
   render(){
     const style = {
       main: {
-        backgroundColor: 'black',
+        backgroundColor: '#e8efef',
+        height: '120vh',
+        width: 'auto',
+        margin: 0,
+        paddingTop: 50,
+        // backgroundImage: "url(" + bg + ")", <-- bg img
+        backgroundSize: "cover",
+        scrollBehavior: "smooth"
+      },
+      dropText: {
+        fontSize: '1.7vw',
+        letterSpacing: "0.15vw",
+        fontFamily: 'Monda',
+        letterSpacing: '0.25vw',
+        // textAlign: 'center',
+        margin: 0,
+        paddingLeft: "33vw",
+        color: '#2b2a2a'
+      },
+      arrow: {
+        paddingTop: "8vw",
+        textAlign: 'center',
+        marginLeft: '1.2vw'
+
+      },
+
+      myName: {
+        fontSize: '5.7vw',
+        fontWeight: '500',
+        fontFamily: 'Arapey',
+        marginBottom: '-0.1vw',
+        letterSpacing: "0.2vw",
+        textAlign: 'center',
+        paddingTop: '12vw',
+        // verticalAlign: 'middle',
+        color: '#0c1a2d',
+      },
+
+      mainM: {
+        backgroundColor: '#e8efef',
         height: '120vh',
         width: '100vw',
-        paddingTop: 50,
-        backgroundImage: "url(" + bg + ")",
+        paddingTop: "35vw",
+        // backgroundImage: "url(" + bg + ")", <-- bg img
         backgroundSize: "cover",
-        backgroundRepeat: 'norepeat'
-
-        // marginTop: 50
+        backgroundRepeat: 'norepeat',
+        scrollBehavior: "smooth"
       },
-
-      text: {
-        fontSize: '10.5vw',
-        fontFamily: 'Monda',
-        margin: 0,
-        // paddingTop: window.innerHeight/5,
-        paddingLeft: -window.innerWidth/10,
-        color: '#2b2a2a',
-      },
-
-      text2: {
-        fontSize: '9vw',
-        fontFamily: 'Monda',
-        margin: 0,
-        // paddingTop: 1,
-        marginTop: -10,
-        paddingLeft: -window.innerWidth/10,
-        color: '#2b2a2a',
-
-      },
-
-      dropText: {
-        fontSize: '3.1vw',
+      dropTextM: {
+        fontSize: '2.7vw',
         fontFamily: 'Monda',
         margin: 0,
         paddingTop: 3,
-        paddingLeft: 12,
-        color: '#2b2a2a',
+        paddingLeft: "10.9vw",
+        color: '#2b2a2a'
       },
-
-      arrow: {
-        paddingTop: 80,
-        textAlign: 'left',
-        paddingLeft: "46vw"
+      arrowM: {
+        paddingTop: "25vw",
+        textAlign: 'center',
+        marginLeft: "-4.4vw"
       },
-
-      about: {
+      aboutM: {
         fontSize: 17,
         fontFamily: 'Monda',
         textAlign: 'center',
         paddingTop: 90,
         paddingBottom: 4,
         color: 'white'
-
       },
 
-      mainMobile: {
-        height: '60vh',
-        width: '100vw',
-        backgroundColor: 'black',
-        // height: window.innerHeight/3,
-        paddingTop: 20,
-        backgroundImage: "url(" + bg + ")",
-        backgroundSize: "600px 800px",
-        backgroundRepeat: 'norepeat'
-
-        // marginTop: 50
-      },
-
-      dropTextMob: {
-        fontSize: '2.7vw',
-        fontFamily: 'Monda',
+      myNameM: {
+        fontSize: '17.1vw',
+        fontFamily: 'Faustina',
         margin: 0,
-        paddingTop: 10,
-        paddingLeft: 7,
-        paddingBottom: 10,
-        color: '#2b2a2a',
-      },
-
-      arrowMob: {
-        paddingTop: 100,
-        // textAlign: 'center',
-        marginLeft: 30
-      },
-
-      text1Mob: {
-        fontSize: '10.5vw',
-        fontFamily: 'Monda',
-        margin: 0,
-        // paddingTop: window.innerHeight/5,
-        paddingLeft: -window.innerWidth/10,
-        color: '#2b2a2a',
-      },
-
-      text2Mob: {
-        fontSize: '9vw',
-        fontFamily: 'Monda',
-        margin: 0,
-        // paddingTop: 1,
-        marginTop: -10,
-        paddingLeft: -window.innerWidth/10,
-        color: '#2b2a2a',
-
+        letterSpacing: "0.4vw",
+        textAlign: 'center',
+        marginLeft: "-4vw",
+        paddingTop: '10vw',
+        verticalAlign: 'middle',
+        color: '#0c1a2d',
       }
     }
 
@@ -139,32 +126,34 @@ class Typing extends Component {
         <MediaQuery query="(min-device-width: 650px)">
           <div style = {style.main} className = 'typewriter'>
             <div className = {this.hidden}>
-              <h1 style = {style.text}> Hi! <br/></h1>
-              <h2 style = {style.text2}> My name is Omer</h2>
-              <h3 style = {style.dropText}>I&#39;m an engineering student and programming hobbyist</h3>
+              <h4 style = {style.myName}>Omer Khan</h4>
+              <h3 style = {style.dropText}>Engineer | Developer | Designer    </h3>
+              {/*<div className = "lineBreak"></div>*/}
             </div>
+            <Header></Header>
             <div className = 'pageMove' style = {style.arrow}>
-              <img id = 'down' src = {downArrow}/>
-            </div>
-          </div>
-        </MediaQuery>
-
-        <MediaQuery query="(max-device-width: 650px)">
-          <div style = {style.mainMobile} className = 'typewriterMob'>
-            <div className = {this.hiddenMob}>
-              <h1 style = {style.text}> Hi! <br/></h1>
-              <h2 style = {style.text2}> My name is Omer</h2>
-              <h3 style = {style.dropTextMob}>I&#39;m an engineering student and programming hobbyist</h3>
-            </div>
-
-              <a className = 'pageMoveMob' style = {style.arrowMob} href = "http://www.google.com">
-
-              <img id = 'down' src = {downArrow}/>
-
+              <a>
+                <img id = 'down' onClick = {() => this.handleClick()} src = {downArrow}/>
               </a>
-
+            </div>
           </div>
         </MediaQuery>
+
+        {/*<MediaQuery query="(max-device-width: 650px)">
+          <div style = {style.mainM} className = 'typewriterM'>
+            <div className = {this.hidden}>
+              <h4 style = {style.myNameM}>Omer Khan</h4>
+              <h3 style = {style.dropTextM}>Engineer | Web Developer | Passionate Learner  </h3>
+              <div className = "lineBreakM"></div>
+            </div>
+            <Header></Header>
+            <div className = 'pageMoveM' style = {style.arrowM}>
+              <a>
+                <img id = 'downM' onClick = {() => this.handleClick()} src = {downArrow}/>
+              </a>
+            </div>
+          </div>
+        </MediaQuery>*/}
       </div>
     );
   }
