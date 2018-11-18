@@ -157,7 +157,14 @@
   height: 8.3vh;
   padding: 10px;
   margin-left: -1.4vh;
+  opacity: 0;
   filter: brightness(0) invert(0.2);
+  -webkit-transition: opacity 1s ease-in;
+  -moz-transition: opacity 1s ease-in;
+  -ms-transition: opacity 1s ease-in;
+  -o-transition: opacity 1s ease-in;
+  transition: opacity 1s ease-in;
+  transition-delay: 1.5s;
 }
 
 #GitLogoM:hover {
@@ -170,8 +177,15 @@
   margin-left: -2vh;
   padding: 10px;
   margin-top: -1vh;
+  opacity: 0;
   /* padding-right: 1vw; */
   filter: brightness(0%) invert(0.2);
+  -webkit-transition: opacity 1s ease-in;
+  -moz-transition: opacity 1s ease-in;
+  -ms-transition: opacity 1s ease-in;
+  -o-transition: opacity 1s ease-in;
+  transition: opacity 1s ease-in;
+  transition-delay: 1.5s;
 }
 
 #linkedLogoM:hover {
@@ -183,10 +197,39 @@
   height: 8.0vh;
   margin-left: -2vh;
   padding: 10px;
+  opacity: 0;
   /* padding-right: 1vw; */
   filter: brightness(0%) invert(0.2);
+  -webkit-transition: opacity 1s ease-in;
+  -moz-transition: opacity 1s ease-in;
+  -ms-transition: opacity 1s ease-in;
+  -o-transition: opacity 1s ease-in;
+  transition: opacity 1s ease-in;
+  transition-delay: 1.5s;
 }
 
 #codepenM:hover {
   filter: brightness(0) invert(0.5);
+}
+
+@keyframes jumpinM {
+    0% {
+        opacity: 0;
+        transform: translateY(-100);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(-300);
+    }
+}
+
+
+
+@keyframes rotateM {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }

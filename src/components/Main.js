@@ -44,7 +44,13 @@ class Main extends Component {
     animate = () => {
       let bar = document.getElementById('experienceTAB');
       console.log(bar)
-      bar.setAttribute('class','aboutme');
+      try{
+        bar.setAttribute('class','aboutme');
+      }
+      catch(error){
+        console.log(error);
+      }
+
 
     }
 

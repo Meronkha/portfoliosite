@@ -42,33 +42,29 @@ class Header extends Component {
 
       },
 
-
-      MobileDrop: {
-        align: 'center',
-        textAlign: 'right',
-        // paddingLeft: window.innerWidth - 290,
-        paddingTop: 14,
-
-        flexDirection:"Column",
-        display:"flex"
-
-      },
-
       Icon: {
         align: 'right',
         textAlign: 'right'
       },
 
-
-      mobtags: {
-        display: 'flex',
-        position: 'fixed',
-        marginLeft: '60vw'
+      mainDivM: {
+        paddingLeft: '4.5vw',
+        height: window.innerHeight,
+        opacity: 0.6,
+        height: 60,
+        marginTop: "1vw",
+        paddingBottom: '50',
+        overflow: 'visible',
+        textAlign: 'center'
 
       },
-      mobIcon: {
 
-      }
+      IconM: {
+        align: 'right',
+        textAlign: 'right'
+      },
+
+
     }
 
 
@@ -97,6 +93,7 @@ class Header extends Component {
 
               </div>
           </MediaQuery>
+
           <MediaQuery query="(max-device-width: 650px)" style = { style.mainDivM } className = 'mainDivM'>
           <div style = {style.tags} id = 'tagsM'>
                 <a style = {style.Icon} href = "https://github.com/Meronkha " target="_blank">

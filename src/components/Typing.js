@@ -76,27 +76,28 @@ class Typing extends Component {
       },
 
       mainM: {
-        backgroundColor: '#e8efef',
+        backgroundColor: 'white',
         height: '120vh',
-        width: '100vw',
-        paddingTop: "35vw",
+        width: 'auto',
+        paddingTop: "17vw",
         // backgroundImage: "url(" + bg + ")", <-- bg img
         backgroundSize: "cover",
-        backgroundRepeat: 'norepeat',
         scrollBehavior: "smooth"
       },
       dropTextM: {
-        fontSize: '2.7vw',
+        fontSize: '5vw',
+        letterSpacing: "0.45vw",
         fontFamily: 'Monda',
+        letterSpacing: '0.34vw',
+        textAlign: 'center',
         margin: 0,
-        paddingTop: 3,
-        paddingLeft: "10.9vw",
+        paddingLeft: "7vw",
         color: '#2b2a2a'
       },
       arrowM: {
-        paddingTop: "25vw",
+        paddingTop: "43vw",
         textAlign: 'center',
-        marginLeft: "-4.4vw"
+        // marginLeft: "-4.4vw"
       },
       aboutM: {
         fontSize: 17,
@@ -108,13 +109,13 @@ class Typing extends Component {
       },
 
       myNameM: {
-        fontSize: '17.1vw',
-        fontFamily: 'Faustina',
-        margin: 0,
-        letterSpacing: "0.4vw",
+        fontSize: '16vw',
+        fontWeight: '500',
+        fontFamily: 'Arapey',
+        marginBottom: '-0.1vw',
+        letterSpacing: "0.1vw",
         textAlign: 'center',
-        marginLeft: "-4vw",
-        paddingTop: '10vw',
+        paddingTop: '38vw',
         verticalAlign: 'middle',
         color: '#0c1a2d',
       }
@@ -139,21 +140,21 @@ class Typing extends Component {
           </div>
         </MediaQuery>
 
-        {/*<MediaQuery query="(max-device-width: 650px)">
+        <MediaQuery query="(max-device-width: 650px)">
           <div style = {style.mainM} className = 'typewriterM'>
             <div className = {this.hidden}>
               <h4 style = {style.myNameM}>Omer Khan</h4>
-              <h3 style = {style.dropTextM}>Engineer | Web Developer | Passionate Learner  </h3>
-              <div className = "lineBreakM"></div>
+              <h3 style = {style.dropTextM}>Engineer | Developer | Designer  </h3>
+              {/*}<div className = "lineBreakM"></div>*/}
             </div>
-            <Header></Header>
+            <Header/>
             <div className = 'pageMoveM' style = {style.arrowM}>
               <a>
                 <img id = 'downM' onClick = {() => this.handleClick()} src = {downArrow}/>
               </a>
             </div>
           </div>
-        </MediaQuery>*/}
+        </MediaQuery>
       </div>
     );
   }
