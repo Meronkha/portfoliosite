@@ -18,10 +18,7 @@
   font-size: 21px;
   margin-top: 0.5vw;
   text-align: center;
-
-
 }
-
 
 #mobileDrop {
   align: right;
@@ -30,8 +27,8 @@
 }
 
 #GitLogo {
-  width: 6.7vh;
-  height: 6.7vh;
+  width: 3.5vw;
+  height: 3.5vw;
   padding: 10px;
   margin-top: 0.31vw;
   margin-left: -4vw;
@@ -52,8 +49,8 @@
 }
 
 #linkedLogo {
-  width: 8.3vh;
-  height: 8.7vh;
+  width: 4.4vw;
+  height: 4.5vw;
   padding: 10px;
   margin-left: 0.3vw;
   /* padding-right: 1vw; */
@@ -73,8 +70,8 @@
 }
 
 #codepen {
-  width: 6.3vh;
-  height: 6.3vh;
+  width: 3.5vw;
+  height: 3.5vw;
   padding: 10px;
   margin-left: 0.3vw;
   margin-top: 0.15vw;
@@ -140,7 +137,7 @@
 }
 
 #tagsM{
-  margin-top: -75vw;
+  margin-top: -45vh;
   text-align: center;
 
 

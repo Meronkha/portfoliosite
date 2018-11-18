@@ -9,10 +9,10 @@ import Header from './Header.js'
 
 // Images
 // import bg from '../images/bg.png';
-import LL from '../images/LL.png';
+import LL from '../images/LL_New.png';
 import UCL from '../images/ucl3.jpg';
 import aa from '../images/aa.png';
-import website from '../images/website.jpg';
+import website from '../images/myWebsite.png';
 import settings from '../icon/setings.png';
 
 
@@ -64,11 +64,12 @@ class Main extends Component {
   render(){
     const style = {
       mainDiv: {
-        backgroundColor: '#e8efef',
-        marginLeft: '5vw',
-        marginTop: '-3.3vw',
+        paddingLeft: '5vw',
+        paddingTop: '-3.3vw',
         alignItems: 'right',
         backgroundSize: "cover",
+        backgroundColor: 'white',
+        borderColor: 'white'
       },
 
       disc: {
@@ -125,7 +126,7 @@ class Main extends Component {
           <div id = 'experienceTAB'>
           {this.state.renderTAB ?
                                     <div>
-                                      <h1> EXP </h1>
+                                      <h1> MY EXP </h1>
                                     </div>: null}
           </div>
 
@@ -155,7 +156,7 @@ class Main extends Component {
               <div style = {style.experience1} className = 'experience1'>
                   <div className = 'LL'>
                     <img src = {LL} style = {style.LL}/>
-                    <div className = 'innerDiv2'>
+                    <div className = 'innerDiv3'>
                       <h1>Developer, Learning Labs</h1>
                       <h2>Fall 2018 - Present</h2>
                       <p>
@@ -177,7 +178,7 @@ class Main extends Component {
                       <h2>Fall 2018 - Present</h2>
                       <p>
                         With the intention of learning the fundamentals of full stack development, I set out on a journey of creating my own website. <br/>
-                        Learning how to operate a back-end server with expressJS, model an aesthetic front-end with reactJS, understanding DNS servers, utilising git to appropriately and safely to advance versions and much more.
+                        Learning how to operate a back-end server with expressJS, model an aesthetic front-end with reactJS, understanding DNS, utilising git to appropriately and safely to advance versions and much more.
                         <br/><br/>
                         This project was essential to my development.
 

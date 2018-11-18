@@ -70,7 +70,7 @@ export default class Infograph extends Component {
         flexDirection: 'row',
         // alignItems: 'center',
         paddingLeft: '20vw',
-        backgroundColor: '#e8efef',
+        backgroundColor: 'white',
         paddingBottom: '6vw',
         // paddingTop: '3vw'
       },
@@ -181,9 +181,9 @@ export default class Infograph extends Component {
       main2: {
         display: 'flex',
         flexDirection: 'row',
-        marginTop: '-4vw',
+        marginTop: '-8vw',
         paddingLeft: '35vw',
-        backgroundColor: '#e8efef',
+        backgroundColor: 'white',
         fontFamily: 'Arapey',
       }
 

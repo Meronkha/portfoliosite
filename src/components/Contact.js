@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import '../stylesheets/Contact.css';
 
 //images
-import me from '../images/me21.jpeg';
+import me from '../images/me2.jpeg';
 import email from '../icon/email.png';
 
 
@@ -43,7 +43,7 @@ class Contact extends Component {
   render(){
     const style = {
       main: {
-        backgroundColor: '#e8efef',
+        backgroundColor: 'white',
         fontColor: '#636868;',
         paddingBottom: '5vw',
         marginTop: '-15vw',
@@ -51,10 +51,11 @@ class Contact extends Component {
         paddingTop: "8vw",
         fontWeight: 400,
         height: 'auto',
+        borderColor: 'white'
       },
 
       intro: {
-        backgroundColor: '#e8efef',
+        backgroundColor: 'white',
       },
 
       quote: {

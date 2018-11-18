@@ -96,18 +96,19 @@
   margin-right: -2vw;
   border-width: 5px 5px;
   margin-top: -1.5vw;
-  animation: rainbow 10s steps(100) infinite alternate;
+  border: 5px solid #0f2747;
+  /* animation: rainbow 0.9s steps(100) infinite alternate; */
 
 }
-
+/****
 #goku:hover{
-  /* filter: grayscale(0%);
-  filter:invert(0.1); */
+  filter: grayscale(0%);
+  filter:invert(0.1);
   box-shadow:
-  0 0 1px 3px #F9D477,  /* inner white */
-  0 0 30px 10px #F9D477, /* middle magenta */
-  0 0 10px 7px #C7AA5F; /* outer cyan */
-}
+  0 0 1px 3px #F9D477,
+  0 0 30px 10px #F9D477,
+  0 0 10px 7px #C7AA5F;
+} */
 
 @keyframes glow {
   0% { box-shadow: none; }
@@ -136,7 +137,7 @@
   display: block;
   width: 30vw;
   height: 30vw;
-  border: 1px solid #C7AA5F;
+  border: 3px solid #C7AA5F;
   /* display: inline-block; */
   /* margin-left: 1.6vw;
   margin-right: 5px;

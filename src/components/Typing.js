@@ -37,7 +37,7 @@ class Typing extends Component {
   render(){
     const style = {
       main: {
-        backgroundColor: '#e8efef',
+        backgroundColor: 'white',
         height: '120vh',
         width: 'auto',
         margin: 0,
@@ -59,7 +59,7 @@ class Typing extends Component {
       arrow: {
         paddingTop: "8vw",
         textAlign: 'center',
-        marginLeft: '1.2vw'
+        marginLeft: '0.5vw'
 
       },
 

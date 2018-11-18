@@ -16,6 +16,7 @@
 #experienceTAB {
   padding-top: 6vw;
   height: 0;
+  background-color: white;
 }
 .aboutme {
   border-radius: 10px;
@@ -38,7 +39,7 @@
   padding-left: 0.8vw;
   font-size: 2vw;
   font-weight: bold;
-  color: #e8efef;
+  color: white;
   letter-spacing: 0.1vw;
   font-family: Arapey;
 }
@@ -158,7 +159,7 @@
   vertical-align: baseline;
   text-align: left;
   /* margin-top: -5px; */
-  margin-left: 14vw;
+  margin-left: 3vw;
   letter-spacing: 0.1vw;
   font-family: DinRegular;
   font-weight: 600;
@@ -167,7 +168,7 @@
 }
 .LL h2 {
   text-align: left;
-  margin-left: 14vw;
+  margin-left: 3vw;
   font-size: 0.8vw;
   letter-spacing: 0.1vw;
   font-family: DinRegular;
@@ -180,11 +181,10 @@
 .LL p{
   text-align: left;
   /* padding-top: 5vw; */
-  line-height: 1.7vw;
+  line-height: 0.5vw;
   padding-top: 1vw;
-  padding-left: 5vw;
   font-size: 1.3vw;
-  margin-left: 15vw;
+  /* margin-left: -15vw; */
   word-wrap: break-word;
 
 
@@ -196,29 +196,28 @@
   margin-top: 2vw;
   margin-left: -10vw;
   border-radius: 15px;
-  margin-right: -10.8vw;
   border: 1px solid;
   border-color: black;
   box-shadow: 0 30px 40px rgba(0,0,0,0.8);
 }
 
-.innerDiv2 {
+.innerDiv3 {
     display: block;
     text-align: center;
     word-wrap: break-word;
   }
 
-.innerDiv2 p{
+.innerDiv3 p{
     font-size: 1.2vw;
-    line-height: 1.5vw;
-    margin-left: 9vw;
+    line-height: 1.35vw;
+    margin-left: 3vw;
     color: #636868;
     font-family: DinRegular, sans-serif;
     padding-right: 5vw;
     font-weight: 400;
     word-wrap: break-word;
   }
-.innerDiv2 h1{
+.innerDiv3 h1{
     font-size: 2vw;
   }
 
@@ -388,7 +387,6 @@
   margin-left: 1.5vw;
   padding-left: 2px;
   /* border-radius: 5%; */
-  padding-right: 40px;
   padding-top: 50px;
   border-style: solid;
   border-color: #0c1a2d;
@@ -594,7 +592,7 @@
   100% {transform: rotate(360deg);}
 }
 .development {
-  background-color: #e8efef;
+  background-color: white;
   font-family: Monda;
   text-align: center;
   font-size: 6vw;
