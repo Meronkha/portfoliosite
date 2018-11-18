@@ -1,12 +1,12 @@
 {
-  "main.css": "static/css/main.19d5d152.css",
-  "main.css.map": "static/css/main.19d5d152.css.map",
-  "main.js": "static/js/main.98411348.js",
-  "main.js.map": "static/js/main.98411348.js.map",
+  "main.css": "static/css/main.02d240a1.css",
+  "main.css.map": "static/css/main.02d240a1.css.map",
+  "main.js": "static/js/main.04e36651.js",
+  "main.js.map": "static/js/main.04e36651.js.map",
   "static\\media\\CSS3_logo.png": "static/media/CSS3_logo.747e0cdd.png",
   "static\\media\\DIN-Regular.ttf": "static/media/DIN-Regular.e0185b8d.ttf",
   "static\\media\\JS_Logo.png": "static/media/JS_Logo.637ccbf2.png",
-  "static\\media\\LL.png": "static/media/LL.931ff365.png",
+  "static\\media\\LL_New.png": "static/media/LL_New.7e30b190.png",
   "static\\media\\Matlab.png": "static/media/Matlab.cf286322.png",
   "static\\media\\aa.png": "static/media/aa.f984eaaa.png",
   "static\\media\\background.jpg": "static/media/background.324716ec.jpg",
@@ -17,11 +17,10 @@
   "static\\media\\html.png": "static/media/html.da3c36ab.png",
   "static\\media\\linkedin-logo.png": "static/media/linkedin-logo.7fb99744.png",
   "static\\media\\me2.jpeg": "static/media/me2.a3278f0e.jpeg",
-  "static\\media\\me21.jpeg": "static/media/me21.48e11f61.jpeg",
+  "static\\media\\myWebsite.png": "static/media/myWebsite.9e508305.png",
   "static\\media\\nodejs2.png": "static/media/nodejs2.f8dab57d.png",
   "static\\media\\pyth.png": "static/media/pyth.ca2ceddc.png",
   "static\\media\\react.png": "static/media/react.61a7eeee.png",
   "static\\media\\setings.png": "static/media/setings.33697f6b.png",
-  "static\\media\\ucl3.jpg": "static/media/ucl3.bfebdb81.jpg",
-  "static\\media\\website.jpg": "static/media/website.62c4f4e8.jpg"
+  "static\\media\\ucl3.jpg": "static/media/ucl3.bfebdb81.jpg"
 }
