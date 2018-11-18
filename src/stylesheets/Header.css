@@ -156,7 +156,7 @@
   width: 8.3vh;
   height: 8.3vh;
   padding: 10px;
-  margin-left: -1.4vh;
+  margin-left: -1.9vh;
   opacity: 0;
   filter: brightness(0) invert(0.2);
   -webkit-transition: opacity 1s ease-in;
@@ -174,7 +174,6 @@
 #linkedLogoM {
   width: 11vh;
   height: 11vh;
-  margin-left: -2vh;
   padding: 10px;
   margin-top: -1vh;
   opacity: 0;
@@ -195,7 +194,6 @@
 #codepenM {
   width: 8.0vh;
   height: 8.0vh;
-  margin-left: -2vh;
   padding: 10px;
   opacity: 0;
   /* padding-right: 1vw; */

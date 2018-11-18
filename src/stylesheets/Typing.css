@@ -112,8 +112,8 @@
   to {
     visibility: visible;
   }
-  from { width: 0%}
-  to { width: 92.3% }
+  from { width: 3%}
+  to { width: 96.3% }
 }
 
 
@@ -136,8 +136,11 @@
   width: 17vw;
   height: 17vw;
   margin-top: 2vw;
-  animation: bobble 1s infinite steps(60) alternate;
-  animation-delay: 3.1s;
+  opacity: 0;
+  transition: opacity 3s ease-in;
+  animation: breathe 4s infinite steps(100) alternate,
+  bobbleM 1s infinite steps(60) alternate;
+  animation-delay: 2.6s;
 }
 
 #downM:hover{

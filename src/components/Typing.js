@@ -79,7 +79,7 @@ class Typing extends Component {
         backgroundColor: 'white',
         height: '120vh',
         width: 'auto',
-        paddingTop: "17vw",
+        paddingTop: "12vw",
         // backgroundImage: "url(" + bg + ")", <-- bg img
         backgroundSize: "cover",
         scrollBehavior: "smooth"
@@ -88,7 +88,6 @@ class Typing extends Component {
         fontSize: '5vw',
         letterSpacing: "0.45vw",
         fontFamily: 'Monda',
-        letterSpacing: '0.34vw',
         textAlign: 'center',
         margin: 0,
         paddingLeft: "7vw",

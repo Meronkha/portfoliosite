@@ -225,7 +225,7 @@ class Main extends Component {
             <h1> </h1> <br/>
             The mobile version of my site is currently undergoing some maintenance.
             <br/><br/>
-            If you wish to access the site, please switch to a <span style = {{fontWeight: 700}}>non-mobile device. </span>
+            If you wish to access the full site, please switch to a <span style = {{fontWeight: 700}}>non-mobile device. </span>
             <br/><br/><br/>
 
           </div>
