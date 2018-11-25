@@ -101,6 +101,19 @@
   100% { opacity: 1; }
 }
 
+.myImg {
+  text-align: center;
+  padding-top: 9vw;
+}
+
+.myImg img {
+  height: 8vw;
+  width: 8vw;
+  border-radius: 50%;
+  border: 1.5px solid #0f2747;
+}
+
+
 /*
             ===================
             |  MOBILE DEVICES |

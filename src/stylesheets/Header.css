@@ -13,11 +13,17 @@
   /* position: fixed; */
 }
 
-#tags{
 
+
+#tags{
   font-size: 21px;
-  margin-top: 0.5vw;
+  padding-left: 46vw;
+  margin-top: 1.5vw;
   text-align: center;
+  align-items: center;
+  display: flex;
+  /*align-content: flex-start;*/
+  flex-direction: row;
 }
 
 #mobileDrop {
@@ -26,34 +32,57 @@
 
 }
 
+.github:hover {
+  filter: brightness(0) invert(0.6);
+  text-decoration: none;
+}
+
+
+
+.linked:hover {
+  filter: brightness(0) invert(0.6);
+}
+
+
+.codepen:hover {
+  filter: brightness(0) invert(0.6);
+}
 #GitLogo {
-  width: 3.5vw;
-  height: 3.5vw;
-  padding: 10px;
-  margin-top: 0.31vw;
-  margin-left: -4vw;
+  width: 2.4vw;
+  height: 2.4vw;
+  border-radius: 50%;
+  margin-left: -3.2vw;
+  margin-bottom: 1vw;
+  margin-top: -0.1vw;
+  text-decoration: none;
   filter: brightness(0) invert(0);
   opacity: 0;
+  display: flex;,
+  flex-direction: column;
   -webkit-transition: opacity 2s ease-in;
   -moz-transition: opacity 2s ease-in;
   -ms-transition: opacity 2s ease-in;
   -o-transition: opacity 2s ease-in;
-  transition: opacity 2s ease-in;
+  transition: opacity 1s ease-in;
   transition-delay: 1s;
 }
 
 
 #GitLogo:hover {
   filter: brightness(0) invert(0.6);
-  animation: rotate 0.5s;
 }
 
+
 #linkedLogo {
-  width: 4.4vw;
-  height: 4.5vw;
-  padding: 10px;
-  margin-left: 0.3vw;
-  /* padding-right: 1vw; */
+  width: 4.3vw;
+  height: 4.3vw;
+  border-radius: 10px;
+  margin-left: 1.7vw;
+  color: transparent;
+  display: flex;,
+  flex-direction: column;
+  text-decoration: none;
+  margin-top: -0.99vw;
   filter: brightness(0%) invert(0);
   opacity: 0;
   -webkit-transition: opacity 1s ease-in;
@@ -61,20 +90,26 @@
   -ms-transition: opacity 1s ease-in;
   -o-transition: opacity 1s ease-in;
   transition: opacity 1s ease-in;
-  transition-delay: 1.5s;
+  transition-delay: 1s;
 }
 
 #linkedLogo:hover {
   filter: brightness(0) invert(0.6);
-  animation: rotate 0.5s;
+  color: black;
+  text-decoration: none;
+
 }
 
 #codepen {
-  width: 3.5vw;
-  height: 3.5vw;
-  padding: 10px;
-  margin-left: 0.3vw;
-  margin-top: 0.15vw;
+  width: 2.7vw;
+  height: 2.7vw;
+  border-radius: 10px;
+  margin-bottom: 0.4vw;
+  display: flex;
+  margin-left: 2vw;
+  margin-right: -3vw;
+  flex-direction: column;
+  margin-top: 0.25vw;
   /* padding-right: 1vw; */
   filter: brightness(0%) invert(0);
   opacity: 0;
@@ -83,12 +118,11 @@
   -ms-transition: opacity 1s ease-in;
   -o-transition: opacity 1s ease-in;
   transition: opacity 1s ease-in;
-  transition-delay: 2s;
+  transition-delay: 1s;
 }
 
 #codepen:hover {
   filter: brightness(0) invert(0.6);
-  animation: rotate 0.5s;
 }
 
 /* @keyframes move {

@@ -8,12 +8,12 @@ import Infograph from './Infograph.js';
 import Header from './Header.js'
 
 // Images
-// import bg from '../images/bg.png';
-import LL from '../images/LL_New.png';
-import UCL from '../images/ucl3.jpg';
+import LL from '../images/LLL.png';
+import UCL from '../images/ucl.jpg';
 import aa from '../images/aa.png';
 import website from '../images/myWebsite.png';
 import settings from '../icon/setings.png';
+import email from '../icon/email.png';
 
 
 class Main extends Component {
@@ -127,7 +127,7 @@ class Main extends Component {
     return(
       <div >
         <MediaQuery query="(min-device-width: 650px)">
-          <Contact id = 'contact'/>
+          {/*<Contact id = 'contact'/>*/}
           <Infograph id = 'Infograph'/>
           <div id = 'experienceTAB'>
           {this.state.renderTAB ?
@@ -144,14 +144,14 @@ class Main extends Component {
                 <div className = 'UCL'>
                   <img src = {UCL} style = {style.UCL}/>
                   <div className = 'innerDiv'>
-                    <h1>UCL, MEng</h1>
+                    <h1>UCL, BEng with Programming</h1>
                     <h2>Fall 2017 - present</h2>
                     <p>
-                      I&#39;m a 2nd year Mechanical Engineering at UCL. Progessing with a 75% average in Year 1 (98th percentile of the Yeargroup),
-                      I have studied the following key modules:
-                      CAD, Dynamics Thermodynamics & Fluid Mechanics, Financial Mathematics and Material Science. <br/><br/>
+                      Progessing to 2nd year with a 75%+ average;
+                        I have studied the following key modules:<br/>
+                          &nbsp;&#8226;Programming theory<br/>&nbsp;&#8226;CAD <br/>&nbsp;&#8226;Dynamics<br/>&nbsp;&#8226;Thermodynamics & Fluid Mechanics <br/>
 
-                      I have always had a deep fascination for Technology and understanding how it works; Reading Engineering was the obvious choice for me.
+                        I have always had a deep fascination for Technology and understanding how it works; Reading Engineering was the obvious choice for me.
 
                     </p>
                   </div>
@@ -159,11 +159,12 @@ class Main extends Component {
               </div>
 
               <br hr = '5'/>
-              <div style = {style.experience1} className = 'experience1'>
+              
+              <div className = 'experience1'>
                   <div className = 'LL'>
                     <img src = {LL} style = {style.LL}/>
                     <div className = 'innerDiv3'>
-                      <h1>Developer, Learning Labs</h1>
+                      <h1>Developer, www.learninglabsuk.com</h1>
                       <h2>Fall 2018 - Present</h2>
                       <p>
                       Working in a team of 3, I was reponsible for the
@@ -176,7 +177,7 @@ class Main extends Component {
                     </div>
                   </div>
               </div>
-              <div className = 'experience3'>
+              {/*<div className = 'experience3'>
                   <div className = 'web'>
                     <img src = {website} style = {style.LL}/>
                     <div className = 'innerDiv2'>
@@ -192,7 +193,7 @@ class Main extends Component {
                       </p>
                     </div>
                   </div>
-              </div>
+              </div> */}
               {/*<div style = {style.experience3} className = 'experience1'>
                   <div className = 'AA'>
                     <img src = {aa} style = {style.LL}/>
@@ -210,6 +211,17 @@ class Main extends Component {
                     </div>
                   </div>
               </div> */}
+            </div>
+            
+          </div>
+          <div className = 'email'>
+            <div class = "obj1">
+              <img src = {email}/>
+            </div>
+            <div class = "obj2">
+              <p>
+                omerfkhan98@gmail.com
+              </p>
             </div>
           </div>
 

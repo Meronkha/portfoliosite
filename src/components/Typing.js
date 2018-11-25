@@ -4,6 +4,9 @@ import downArrow from '../icon/down.svg';
 import MediaQuery from 'react-responsive';
 import Header from './Header';
 
+//images
+import me from '../images/me2.jpeg';
+
 class Typing extends Component {
   constructor(props) {
       super(props);
@@ -42,36 +45,31 @@ class Typing extends Component {
         width: 'auto',
         margin: 0,
         paddingTop: 50,
-        // backgroundImage: "url(" + bg + ")", <-- bg img
         backgroundSize: "cover",
         scrollBehavior: "smooth"
       },
       dropText: {
         fontSize: '1.7vw',
-        letterSpacing: "0.15vw",
         fontFamily: 'Monda',
-        letterSpacing: '0.25vw',
-        // textAlign: 'center',
+        letterSpacing: '0.15vw',
         margin: 0,
-        paddingLeft: "33vw",
+        paddingLeft: "34.5vw",
         color: '#2b2a2a'
       },
       arrow: {
         paddingTop: "8vw",
         textAlign: 'center',
-        marginLeft: '0.5vw'
+        marginLeft: '-0.5vw'
 
       },
 
       myName: {
-        fontSize: '5.7vw',
+        fontSize: '5.3vw',
         fontWeight: '500',
         fontFamily: 'Arapey',
-        marginBottom: '-0.1vw',
+        marginBottom: '-0.5vw',
         letterSpacing: "0.2vw",
         textAlign: 'center',
-        paddingTop: '12vw',
-        // verticalAlign: 'middle',
         color: '#0c1a2d',
       },
 
@@ -80,7 +78,6 @@ class Typing extends Component {
         height: '120vh',
         width: 'auto',
         paddingTop: "12vw",
-        // backgroundImage: "url(" + bg + ")", <-- bg img
         backgroundSize: "cover",
         scrollBehavior: "smooth"
       },
@@ -126,9 +123,11 @@ class Typing extends Component {
         <MediaQuery query="(min-device-width: 650px)">
           <div style = {style.main} className = 'typewriter'>
             <div className = {this.hidden}>
+              <div class = 'myImg'>
+                <img src = {me}/>
+              </div>
               <h4 style = {style.myName}>Omer Khan</h4>
               <h3 style = {style.dropText}>Engineer | Developer | Designer    </h3>
-              {/*<div className = "lineBreak"></div>*/}
             </div>
             <Header></Header>
             <div className = 'pageMove' style = {style.arrow}>
@@ -144,7 +143,6 @@ class Typing extends Component {
             <div className = {this.hidden}>
               <h4 style = {style.myNameM}>Omer Khan</h4>
               <h3 style = {style.dropTextM}>Engineer | Developer | Designer  </h3>
-              {/*}<div className = "lineBreakM"></div>*/}
             </div>
             <Header/>
             <div className = 'pageMoveM' style = {style.arrowM}>
