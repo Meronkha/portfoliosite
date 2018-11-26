@@ -10,7 +10,7 @@
   color: black;
   visibility: hidden;
   border-right: .05em solid black;
-  /* border-right: .15em solid black; /* The typwriter cursor */ */
+  /* border-right: .15em solid black; /* The typwriter cursor */
   border-left: 3em;
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
@@ -186,8 +186,8 @@
    /* display:inline; */
   -webkit-animation-fill-mode: backwards;
   animation:
-   typing3M 1.2s steps(500, end),
-   blink-caret .75s step-end infinite;
+   typing3M 1.2s steps(50, end),
+   blink-caret .75s step-end;
    color: black;
   /* animation-delay: 7s; */
   animation-fill-mode: forwards;
@@ -206,12 +206,26 @@
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
    display:inline;
   animation:
-   typing3 3.5s steps(150, end),
-   blink-caret .75s step-end infinite;
+   typing3M 1.2s steps(500, end),
+   blink-caret .75s step-end;
    color: none;
   /* animation-delay: 7s; */
   animation-fill-mode: forwards;
   letter-spacing: .005em;
   animation-delay: 0.2s;
     /* Adjust as needed */
+}
+
+
+.myImgM {
+  text-align: center;
+  padding-top: 39vw;
+  margin-bottom: -5vw;
+}
+
+.myImgM img {
+  height: 25vw;
+  width: 25vw;
+  border-radius: 50%;
+  border: 1.5px solid #0f2747;
 }

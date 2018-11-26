@@ -22,30 +22,48 @@ class Main extends Component {
       this.state = {
         renderTAB: false,
         renderUCL: false,
+        // Default nonM
+        target: 'experienceTAB',
+        mission: 'aboutme'
+        
       };
     }
-
-    componentDidMount = () => {
-      window.addEventListener('scroll',this.increase);
+    
+    checkMobileStatus = function(){
+      let x = window.matchMedia("(max-width:650px");
+      if (x.matches){
+        return true;
       }
+    return false;
+  }
+
+  componentDidMount = () => {
+    if (this.checkMobileStatus()){
+      this.setState({target: 'experienceTABM', mission: 'aboutmeM'});
+    }
+    else {
+      this.setState({target: 'experienceTAB', mission: 'aboutme'});
+    }
+    window.addEventListener('scroll',this.increase);
+    }
 
     increase = () => {
         let responseH = 0;
         responseH += window.scrollY;
 
         if (responseH > window.innerHeight/0.75){
-          this.animate();
+          this.animate(this.state.target,this.state.mission);
           this.setState({renderTAB: true});
           setTimeout(window.removeEventListener('scroll',this.increase), 1000);
 
         }
     }
 
-    animate = () => {
-      let bar = document.getElementById('experienceTAB');
+    animate = (target,mission) => {
+      let bar = document.getElementById(target);
       console.log(bar)
       try{
-        bar.setAttribute('class','aboutme');
+        bar.setAttribute('class',mission);
       }
       catch(error){
         console.log(error);
@@ -214,16 +232,16 @@ class Main extends Component {
             </div>
             
           </div>
-          <div className = 'email'>
-            <div class = "obj1">
+          {/*<div className = 'email'>
+            <div className = "obj1">
               <img src = {email}/>
             </div>
-            <div class = "obj2">
+            <div className = "obj2">
               <p>
                 omerfkhan98@gmail.com
               </p>
             </div>
-          </div>
+          </div>*/}
 
 
         </MediaQuery>
@@ -232,7 +250,10 @@ class Main extends Component {
 
 
         <MediaQuery query="(max-device-width: 650px)">
-          <div className = 'development'>
+          {/*
+              The maintenance bit
+          */}
+          {/*<div className = 'development'>
             <img src = {settings}/>
             <h1> </h1> <br/>
             The mobile version of my site is currently undergoing some maintenance.
@@ -240,50 +261,73 @@ class Main extends Component {
             If you wish to access the full site, please switch to a <span style = {{fontWeight: 700}}>non-mobile device. </span>
             <br/><br/><br/>
 
+          </div> */}
+          
+          <Infograph id = 'Infograph'/>
+          <div id = 'experienceTABM'>
+          {this.state.renderTAB ?
+                                    <div>
+                                      <h1> MY EXP </h1>
+                                    </div>: null}
           </div>
-          <Header/>
-            {/*<div style = { style.mainDivM } className = 'mainDivM'>
 
-              <div className = 'containerM'>
+          <div className = 'mainDivM'>
 
-                <div style = {style.experience2M} className = 'experience2'>
-                  <div className = 'UCLM'>
-                    <img src = {UCL} style = {style.UCLM}/>
-                    <div className = 'innerDivM'>
-                      <h1>UCL, MEng</h1>
-                      <h2>Fall 2017 - present</h2>
-                      <p>
-                        • I am currently studying Mechanical Engineering at UCL. <br/>
-                        • Progressing to my 2nd year with a 1:1 (75%)<br/>
-                        • Studied key modules such as CAD, Dynamics and Financial Mathematics.
+            <div className = 'containerM'>
 
-                      </p>
-                    </div>
-
-                  </div>
-                </div>
-                <div style = {style.experience1M} className = 'experience1M'>
-                <div className = 'LLM'>
-                  <img src = {LL} style = {style.LLM}/>
+              <div className = 'experience2M'>
+                <div className = 'UCLM'>
+                  <img src = {UCL} style = {style.UCL}/>
                   <div className = 'innerDivM'>
-                    <h1>Learning Labs</h1>
-                    <h2>Fall 2018 - Present</h2>
+                    <h1>UCL, BEng w/ Programming</h1>
+                    <h2>Fall 2017 - present</h2>
                     <p>
-                    • Full stack development of a bespoke online learning platform for a nationally syndicated private education company.<br/>
-                    • The Learning Labs Portal allows comprehensive examinations, tasks, and analysis to be done by students and parents respectively.<br/>
-                    • The platform is supported by an interactive database with multiple user profiles, and in-depth data analytics (client driven KPIs)
-                    on student performance, application and progress.<br/>
-                    • Built and maintained using ReactJS, ExpressJS, Firebase, HTML5, CSS3 and Bootstrap<br/>
+                      Progessing to 2nd year with a 75%+ average;
+                        I have studied the following key modules:<br/>
+                          <span style = {{fontWeight: '500'}}>
+                          &nbsp;&#8226;Programming theory<br/>&nbsp;&#8226;CAD <br/>&nbsp;&#8226;Dynamics<br/>&nbsp;&#8226;Thermodynamics & Fluid Mechanics <br/> </span>
+
+                        I have always had a deep fascination for Technology and understanding how it works; Reading Engineering was the obvious choice for me.
+
                     </p>
-                  </div>
-
-
                   </div>
                 </div>
               </div>
-            </div>
 
-            <Contact id = 'contact'></Contact>*/}
+              <br hr = '5'/>
+              
+              <div className = 'experience1M'>
+                  <div className = 'LLM'>
+                    <img src = {LL}/>
+                    <div className = 'innerDiv3M'>
+                      <h1>Developer, www.learninglabsuk.com</h1>
+                      <h2>Fall 2018 - Present</h2>
+                      <p>
+                      Working in a team of 3, I was reponsible for the
+                      full stack development of a web application for a nationally syndicated private education company.
+                      The Learning Labs Portal allows comprehensive examinations, tasks, and analysis to be done by students and parents respectively.<br/><br/>
+                      The platform is supported by an interactive database with multiple user profiles, and in-depth data analytics (client driven KPIs)
+                      on student performance, application and progress.<br/><br/>
+                      Built and maintained using <span style = {{fontWeight: 'bold'}}> ReactJS, ExpressJS, Firebase, HTML5, CSS3 and Bootstrap </span><br/>
+                      </p>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            
+          </div>
+          {/*<div className = 'email'>
+            <div className = "obj1">
+              <img src = {email}/>
+            </div>
+            <div className = "obj2">
+              <p>
+                omerfkhan98@gmail.com
+              </p>
+            </div>
+          </div> */}
+
+          
         </MediaQuery>
       </div>
       );

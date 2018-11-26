@@ -74,7 +74,7 @@ class Header extends Component {
               */}
 
               <div id = 'tags'>
-                  <div class = 'github'>
+                  <div className = 'github'>
                     <a style = {style.Icon} href = "https://github.com/Meronkha " target="_blank">
                     <div>
                         <img  onLoad = {() => this.fadeIn('GitLogo')} src = {Gitlogo} id = 'GitLogo'/>
@@ -85,7 +85,7 @@ class Header extends Component {
                     </a>
                   </div>
                   
-                  <div class = 'linked'>
+                  <div className = 'linked'>
                     <a style = {style.Icon} href = "https://www.linkedin.com/in/meronkha" target="_blank">
                       <img onLoad = {() => this.fadeIn('linkedLogo')} src = {Linked} id = 'linkedLogo'/>
                       <div style = {{textDecoration: 'none', fontFamily: 'Monda', fontSize: '1vw', marginLeft: '-4.5vw', marginRight: '0.2vw', marginTop: '-1.2vw',color: 'white'}}>
@@ -94,7 +94,7 @@ class Header extends Component {
                     </a>
                   </div>
 
-                  <div class = 'codepen'>
+                  <div className = 'codepen'>
                     <a style = {style.Icon} href = "https://codepen.io/meronkha/" target="_blank">
                       <img onLoad = {() => this.fadeIn('codepen')} src = {codepen} id = 'codepen'/>
                       <div style = {{textDecoration: 'none', fontFamily: 'Monda', fontSize: '1vw',marginLeft: '1.6vw', marginTop: '-0.8vw',color: 'white'}}>
@@ -108,17 +108,34 @@ class Header extends Component {
 
           <MediaQuery query="(max-device-width: 650px)" style = { style.mainDivM } className = 'mainDivM'>
           <div style = {style.tags} id = 'tagsM'>
-                <a style = {style.Icon} href = "https://github.com/Meronkha " target="_blank">
-                  <img  onLoad = {() => this.fadeIn('GitLogoM')} src = {Gitlogo} id = 'GitLogoM'/>
-                </a>
+                  <div className = 'github'>
+                    <a style = {style.Icon} href = "https://github.com/Meronkha " target="_blank">
+                    <div>
+                        <img  onLoad = {() => this.fadeIn('GitLogoM')} src = {Gitlogo} id = 'GitLogoM'/>
+                        <div id = 'githover' style = {{textDecoration: 'none', fontFamily: 'Monda', fontSize: '4vw', marginLeft: '-3.8vw', marginRight: '0.2vw', marginTop: '-1.2vw',color: 'white'}}>
+                          <p>github</p>
+                        </div>
+                    </div>
+                    </a>
+                  </div>
 
-                <a style = {style.Icon} href = "https://www.linkedin.com/in/meronkha" target="_blank">
-                  <img onLoad = {() => this.fadeIn('linkedLogoM')} src = {Linked} id = 'linkedLogoM'/>
-                </a>
+                  <div className = 'linked'>
+                    <a style = {style.Icon} href = "https://www.linkedin.com/in/meronkha" target="_blank">
+                      <img onLoad = {() => this.fadeIn('linkedLogoM')} src = {Linked} id = 'linkedLogoM'/>
+                      <div style = {{textDecoration: 'none', fontFamily: 'Monda', fontSize: '4vw', marginLeft: '-4.5vw', marginRight: '0.2vw', marginTop: '-1.2vw',color: 'white'}}>
+                        <p >linkedin</p>
+                      </div>
+                    </a>
+                  </div>
 
-                <a style = {style.Icon} href = "https://codepen.io/meronkha/" target="_blank">
-                  <img onLoad = {() => this.fadeIn('codepenM')} src = {codepen} id = 'codepenM'/>
-                </a>
+                  <div className = 'codepen'>
+                    <a style = {style.Icon} href = "https://codepen.io/meronkha/" target="_blank">
+                      <img onLoad = {() => this.fadeIn('codepenM')} src = {codepen} id = 'codepenM'/>
+                      <div style = {{textDecoration: 'none', fontFamily: 'Monda', fontSize: '4vw',marginLeft: '1.6vw', marginTop: '-0.8vw',color: 'white'}}>
+                        <p>codepen</p>
+                      </div>
+                    </a>
+                  </div>
 
 
           </div>

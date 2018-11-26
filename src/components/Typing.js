@@ -76,18 +76,18 @@ class Typing extends Component {
       mainM: {
         backgroundColor: 'white',
         height: '120vh',
-        width: 'auto',
+        width: window.innerWidth,
         paddingTop: "12vw",
         backgroundSize: "cover",
         scrollBehavior: "smooth"
       },
       dropTextM: {
         fontSize: '5vw',
-        letterSpacing: "0.45vw",
+        letterSpacing: "0.25vw",
         fontFamily: 'Monda',
-        textAlign: 'center',
+        marginTop: '-3vw',
         margin: 0,
-        paddingLeft: "7vw",
+        paddingLeft: "9vw",
         color: '#2b2a2a'
       },
       arrowM: {
@@ -108,10 +108,10 @@ class Typing extends Component {
         fontSize: '16vw',
         fontWeight: '500',
         fontFamily: 'Arapey',
-        marginBottom: '-0.1vw',
+        marginBottom: '-1.6vw',
         letterSpacing: "0.1vw",
         textAlign: 'center',
-        paddingTop: '38vw',
+        paddingTop: '2vw',
         verticalAlign: 'middle',
         color: '#0c1a2d',
       }
@@ -141,6 +141,9 @@ class Typing extends Component {
         <MediaQuery query="(max-device-width: 650px)">
           <div style = {style.mainM} className = 'typewriterM'>
             <div className = {this.hidden}>
+              <div className = 'myImgM'>
+                <img src = {me}/>
+              </div>
               <h4 style = {style.myNameM}>Omer Khan</h4>
               <h3 style = {style.dropTextM}>Engineer | Developer | Designer  </h3>
             </div>

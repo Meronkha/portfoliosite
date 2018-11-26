@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Line, Circle } from 'rc-progress';
 import '../stylesheets/Infograph.css';
+import MediaQuery from 'react-responsive';
+
 
 //Images
 import css from '../icon/CSS3_logo.png';
@@ -20,21 +22,38 @@ export default class Infograph extends Component {
     this.state = {
         percent: 0,
         show: false,
-        renderTAB: false
+        renderTAB: false,
+        // Default non-M devices
+        target: 'test',
+        mission: 'skills'
       };
       this.animate = this.animate.bind(this);
     }
 
   componentDidMount = () => {
+    if (this.checkMobileStatus()){
+      this.setState({target: 'testM', mission: 'skillsM'});
+    }
+    else {
+      this.setState({target: 'test', mission: 'skills'});
+    }
     window.addEventListener('scroll',this.increase);
     }
+      
+  checkMobileStatus = function(){
+    let x = window.matchMedia("(max-width:650px");
+    if (x.matches){
+      return true;
+    }
+    return false;
+  }
 
   increase = () => {
     let responseH = 0;
     responseH += window.scrollY;
 
     if (responseH > window.innerHeight/1.5){
-      this.animate();
+      this.animate(this.state.target,this.state.mission);
       this.setState({show: true, renderTAB: true});
       setTimeout(window.removeEventListener('scroll',this.increase), 1000)
 
@@ -58,9 +77,9 @@ export default class Infograph extends Component {
     });
   }
 
-  animate = () => {
-    let bar = document.getElementById('test');
-    bar.setAttribute('class','skills');
+  animate = (target,mission) => {
+    let bar = document.getElementById(target);
+    bar.setAttribute('class', mission);
 
   }
   render() {
@@ -211,87 +230,238 @@ export default class Infograph extends Component {
         marginTop: '-6.7vw',
         marginLeft: '0.93vw',
         marginRight: '-4vw'
-      }
+      },
+      
+      /*
+      ---------------------
+      |    Mobile style   |
+      ---------------------
+      
+      */
+      mainM: {
+        display: 'flex',
+        flexDirection: 'row',
+        marginTop: '6vw',
+        paddingLeft: '3vw',
+        backgroundColor: 'white',
+        paddingBottom: '10vw',
+      },
+      
+      main2M: {
+        display: 'flex',
+        flexDirection: 'row',
+        marginTop: '-18vw',
+        paddingLeft: '3vw',
+        backgroundColor: 'white',
+        fontFamily: 'Arapey',
+        paddingBottom: '6vw'
+      },
+      
+      main3M: {
+        display: 'flex',
+        flexDirection: 'row',
+        marginTop: '-8vw',
+        paddingLeft: '3vw',
+        backgroundColor: 'white',
+        fontFamily: 'Arapey',
+      },
+      divM: {
+        paddingRight: '1vw',
+        marginLeft: '5vw',
+        width: "25vw",
+        display: 'flex',
+        flexDirection: 'column'
+      },
+
+      div2M: {
+        paddingRight: '1vw',
+        marginLeft: '5vw',
+        width: "25vw",
+        display: 'flex',
+        flexDirection: 'column'
+      },
+      
+      div3M: {
+        paddingRight: '1vw',
+        marginLeft: '5vw',
+        width: "25vw",
+        display: 'flex',
+        flexDirection: 'column'
+      },
 
     }
 
     return (
       <div  style = {{fontColor: 'transparent'}}>
-        <div id = 'test' style = {{fontColor: 'transparent'}}>
-        {this.state.renderTAB ? <div id = 'slider'>
-                                <h1 style = {{fontColor: 'transparent'}}>MY TECH </h1>
-                              </div>: null}
-      </div>
-      
-          <div  className = 'main' style = {style.main}>
+        <MediaQuery query="(min-device-width: 650px)">
 
-            <div onScroll = {() => this.checkHeight()} style = {style.div}      className = 'iconHover'>
-              <Circle  strokeWidth="3.5" strokeColor="#ffb159" percent={this.state.percent}/>
-              <img style = {style.imgJS} src = {js} />
-              <p style = {{marginLeft: '1.6vw', marginTop: '1.8vw'}}>JavaScript</p>
-            </div>
-            <div style = {style.div} className = 'iconHover'>
-              <Circle strokeWidth="3.5" strokeColor="#fff021" percent={this.state.percent}/>
-              <img style = {style.imgPyth} src = {pyth} />
-              <p style = {{marginTop: '2vw', marginLeft: '2.8vw'}}>Python</p>
-            </div>
-            <div style = {style.div} className = 'iconHover'>
-              <Circle  strokeWidth="3.5" strokeColor="#103c82" percent={this.state.percent}/>
-              <img style = {style.imgC} src = {c} />
-              <p style = {{marginTop: '1vw', marginLeft: '4vw'}}>C</p>
-            </div>
-            <br/><hr size = "50"/>
-
+  
+          <div id = 'test' style = {{fontColor: 'transparent'}}>
+          {this.state.renderTAB ? <div id = 'slider'>
+                                  <h1 style = {{fontColor: 'transparent'}}>MY TECH </h1>
+                                </div>: null}
           </div>
-          <br/>
-          <div style = {style.main2} >
-              <div style = {style.div2} className = 'iconHover'>
-              
-                <Circle  strokeWidth="3.5" strokeColor="#f70000" percent={this.state.percent}/>
-                <img style = {style.imgHTML} src = {html} />
-                <p style = {{marginTop: '1.7vw', marginLeft: '2.7vw'}}>HTML5  </p>
-
+        
+            <div  className = 'main' style = {style.main}>
+  
+              <div onScroll = {() => this.checkHeight()} style = {style.div}      className = 'iconHover'>
+                <Circle  strokeWidth="3.5" strokeColor="#ffb159" percent={this.state.percent}/>
+                <img style = {style.imgJS} src = {js} />
+                <p style = {{marginLeft: '1.6vw', marginTop: '1.8vw'}}>JavaScript</p>
               </div>
-
-              <div style = {style.div2} className = 'iconHover'>
-              
-                <Circle  strokeWidth="3.5" strokeColor="#0e50d3" percent={this.state.percent}/>
-                <img style = {style.imgCSS} src = {css} />
-                <p style = {{marginTop: '1.3vw', marginLeft: '3.1vw'}}>CSS3</p>
-
+              <div style = {style.div} className = 'iconHover'>
+                <Circle strokeWidth="3.5" strokeColor="#fff021" percent={this.state.percent}/>
+                <img style = {style.imgPyth} src = {pyth} />
+                <p style = {{marginTop: '2vw', marginLeft: '2.8vw'}}>Python</p>
               </div>
-
-              <div style = {style.div2} className = 'iconHover'>
-                <Circle  strokeWidth="3.5" strokeColor="#37b24d" percent={this.state.percent}/>
-                <img style = {style.imgNODE} src = {node} />
-                <p style = {{marginTop: '2.6vw', marginLeft: '2.7vw'}}>NodeJS</p>
+              <div style = {style.div} className = 'iconHover'>
+                <Circle  strokeWidth="3.5" strokeColor="#103c82" percent={this.state.percent}/>
+                <img style = {style.imgC} src = {c} />
+                <p style = {{marginTop: '1vw', marginLeft: '4vw'}}>C</p>
+              </div>
+              <br/><hr size = "50"/>
+  
+            </div>
+            <br/>
+            <div style = {style.main2} >
+                <div style = {style.div2} className = 'iconHover'>
                 
-              </div>
-          </div>
-          <div style = {style.main3} >
-              <div style = {style.div3} className = 'iconHover'>
-              
-                <Circle  strokeWidth="3.5" strokeColor="#f70000" percent={this.state.percent}/>
-                <img style = {style.imgCATIA} src = {catia} />
-                <p style = {{marginTop: '2.9vw', marginLeft: '2.9vw'}}>CATIA</p>
-
-              </div>
-
-              <div style = {style.div3} className = 'iconHover'>
-              
-                <Circle  strokeWidth="3.5" strokeColor="#6ae9f7" percent={this.state.percent}/>
-                <img style = {style.imgREACT} src = {react} />
-                <p style = {{marginTop: '1.3vw', marginLeft: '3.1vw'}}>React</p>
-
-              </div>
-
-              <div style = {style.div3} className = 'iconHover'>
-                <Circle  strokeWidth="3.5" strokeColor="#5a9bad" percent={this.state.percent}/>
-                <img style = {style.imgMATLAB} src = {matlab} />
-                <p style = {{marginTop: '1.6vw', marginLeft: '2.4vw'}}>MATLAB</p>
+                  <Circle  strokeWidth="3.5" strokeColor="#f70000" percent={this.state.percent}/>
+                  <img style = {style.imgHTML} src = {html} />
+                  <p style = {{marginTop: '1.7vw', marginLeft: '2.7vw'}}>HTML5  </p>
+  
+                </div>
+  
+                <div style = {style.div2} className = 'iconHover'>
                 
-              </div>
+                  <Circle  strokeWidth="3.5" strokeColor="#0e50d3" percent={this.state.percent}/>
+                  <img style = {style.imgCSS} src = {css} />
+                  <p style = {{marginTop: '1.3vw', marginLeft: '3.1vw'}}>CSS3</p>
+  
+                </div>
+  
+                <div style = {style.div2} className = 'iconHover'>
+                  <Circle  strokeWidth="3.5" strokeColor="#37b24d" percent={this.state.percent}/>
+                  <img style = {style.imgNODE} src = {node} />
+                  <p style = {{marginTop: '2.6vw', marginLeft: '2.7vw'}}>NodeJS</p>
+                  
+                </div>
+            </div>
+            <div style = {style.main3} >
+                <div style = {style.div3} className = 'iconHover'>
+                
+                  <Circle  strokeWidth="3.5" strokeColor="#f70000" percent={this.state.percent}/>
+                  <img style = {style.imgCATIA} src = {catia} />
+                  <p style = {{marginTop: '2.9vw', marginLeft: '2.9vw'}}>CATIA</p>
+  
+                </div>
+  
+                <div style = {style.div3} className = 'iconHover'>
+                
+                  <Circle  strokeWidth="3.5" strokeColor="#6ae9f7" percent={this.state.percent}/>
+                  <img style = {{width: '10vw',height: '7vw', marginTop: '-8.2vw',marginLeft: '-0.5vw',marginRight: '-11vw'}} src = {react} />
+                  <p style = {{marginTop: '1.3vw', marginLeft: '3.1vw'}}>React</p>
+  
+                </div>
+  
+                <div style = {style.div3} className = 'iconHover'>
+                  <Circle  strokeWidth="3.5" strokeColor="#5a9bad" percent={this.state.percent}/>
+                  <img style = {style.imgMATLAB} src = {matlab} />
+                  <p style = {{marginTop: '1.6vw', marginLeft: '2.4vw'}}>MATLAB</p>
+                  
+                </div>
+            </div>
+            
+          </MediaQuery>
+            
+          {/*
+              ----------------
+              | Mobile Dev   |
+              ----------------
+          
+          */}
+            
+            
+          <MediaQuery query="(max-device-width: 650px)">
+          
+          <div id = 'testM' style = {{fontColor: 'transparent'}}>
+            {this.state.renderTAB ? <div id = 'slider'>
+                                  <h1 style = {{fontColor: 'transparent'}}>MY TECH </h1>
+                                </div>: null}
           </div>
+            <div  className = 'main' style = {style.mainM}>
+  
+              <div onScroll = {() => this.checkHeight()} style = {style.divM}      className = 'iconHover'>
+                <Circle  strokeWidth="4" strokeColor="#ffb159" percent={this.state.percent}/>
+                <img style = {{width: '12vw',height: '15vw', marginTop: '-19vw',marginLeft: '5.5vw',marginRight: '-15vw'}} src = {js} />
+                <p style = {{marginLeft: '1.6vw', marginTop: '1.8vw'}}>JavaScript</p>
+              </div>
+              <div style = {style.divM} className = 'iconHover'>
+                <Circle strokeWidth="4" strokeColor="#fff021" percent={this.state.percent}/>
+                <img style = {{width: '14vw',height: '14vw', marginTop: '-18vw',marginLeft: '5vw',marginRight: '-15vw'}} src = {pyth} />
+                <p style = {{marginTop: '2vw', marginLeft: '2.8vw'}}>Python</p>
+              </div>
+              <div style = {style.divM} className = 'iconHover'>
+                <Circle  strokeWidth="4" strokeColor="#103c82" percent={this.state.percent}/>
+                <img style = {{width: '18vw',height: '18vw', marginTop: '-20.8vw',marginLeft: '3.5vw',marginRight: '-15vw'}} src = {c} />
+                <p style = {{marginTop: '1vw', marginLeft: '4vw'}}>C</p>
+              </div>
+              <br/><hr size = "50"/>
+  
+            </div>
+            <br/>
+            <div style = {style.main2M} >
+                <div style = {style.div2M} className = 'iconHover'>
+                
+                  <Circle  strokeWidth="4" strokeColor="#f70000" percent={this.state.percent}/>
+                  <img style = {{width: '16vw',height: '16vw', marginTop: '-19vw',marginLeft: '3.8vw',marginRight: '-14vw'}} src = {html} />
+                  <p style = {{marginTop: '1.7vw', marginLeft: '2.7vw'}}>HTML5  </p>
+  
+                </div>
+  
+                <div style = {style.div2M} className = 'iconHover'>
+                
+                  <Circle  strokeWidth="4" strokeColor="#0e50d3" percent={this.state.percent}/>
+                  <img style = {{width: '12vw',height: '17vw', marginTop: '-20vw',marginLeft: '6vw',marginRight: '-15vw'}} src = {css} />
+                  <p style = {{marginTop: '1.3vw', marginLeft: '3.1vw'}}>CSS3</p>
+  
+                </div>
+  
+                <div style = {style.div2M} className = 'iconHover'>
+                  <Circle  strokeWidth="4" strokeColor="#37b24d" percent={this.state.percent}/>
+                  <img style = {{width: '17.5vw',height: '11vw', marginTop: '-17vw',marginLeft: '3.5vw',marginRight: '-15vw'}} src = {node} />
+                  <p style = {{marginTop: '2.6vw', marginLeft: '2.7vw'}}>NodeJS</p>
+                  
+                </div>
+            </div>
+            <div style = {style.main3M} >
+                <div style = {style.div3M} className = 'iconHover'>
+                
+                  <Circle  strokeWidth="4" strokeColor="#f70000" percent={this.state.percent}/>
+                  <img style = {{width: '14vw',height: '14vw', marginTop: '-19vw',marginLeft: '5.5vw',marginRight: '-15.5vw'}} src = {catia} />
+                  <p style = {{marginTop: '2.9vw', marginLeft: '2.9vw'}}>CATIA</p>
+  
+                </div>
+  
+                <div style = {style.div3M} className = 'iconHover'>
+                
+                  <Circle  strokeWidth="4" strokeColor="#6ae9f7" percent={this.state.percent}/>
+                  <img style = {{width: '25vw',height: '18vw', marginTop: '-20vw',marginLeft: '-0.5vw',marginRight: '-15vw'}} src = {react} />
+                  <p style = {{marginTop: '1.3vw', marginLeft: '3.1vw'}}>React</p>
+  
+                </div>
+  
+                <div style = {style.div3M} className = 'iconHover'>
+                  <Circle  strokeWidth="4" strokeColor="#5a9bad" percent={this.state.percent}/>
+                  <img style = {{width: '16vw',height: '16vw', marginTop: '-19vw',marginLeft: '3.5vw',marginRight: '-15vw'}} src = {matlab} />
+                  <p style = {{marginTop: '1.6vw', marginLeft: '2.4vw'}}>MATLAB</p>
+                  
+                </div>
+            </div>
+                        
+            
+          </MediaQuery>
+
 
       </div>
 

@@ -7,13 +7,9 @@
 
 .mainDiv {
   backgroundColor: 'black';
-  /* opacity: 0.1; */
   filter: alpha(opacity=0);
   padding-bottom: auto;
-  /* position: fixed; */
 }
-
-
 
 #tags{
   font-size: 21px;
@@ -22,7 +18,6 @@
   text-align: center;
   align-items: center;
   display: flex;
-  /*align-content: flex-start;*/
   flex-direction: row;
 }
 
@@ -36,8 +31,6 @@
   filter: brightness(0) invert(0.6);
   text-decoration: none;
 }
-
-
 
 .linked:hover {
   filter: brightness(0) invert(0.6);
@@ -110,7 +103,6 @@
   margin-right: -3vw;
   flex-direction: column;
   margin-top: 0.25vw;
-  /* padding-right: 1vw; */
   filter: brightness(0%) invert(0);
   opacity: 0;
   -webkit-transition: opacity 1s ease-in;
@@ -125,14 +117,6 @@
   filter: brightness(0) invert(0.6);
 }
 
-/* @keyframes move {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(200);
-  }
-} */
 
 @keyframes jumpin {
     0% {
@@ -145,8 +129,6 @@
     }
 }
 
-
-
 @keyframes rotate {
   from {
     transform: rotate(0deg);
@@ -156,92 +138,117 @@
   }
 }
 
+
 /*        ------------------
          | MOBILE DEVS |
          -------------------
 */
-
 
 .mainDivM {
   backgroundColor: 'black';
   opacity: 0.9;
   filter: alpha(opacity=0);
   padding-bottom: auto;
-  /* position: fixed; */
-}
-
-#tagsM{
-  margin-top: -45vh;
-  text-align: center;
-
-
 }
 
 #mobileDropM {
-  align: right;
   padding-left: 5px;
 
 }
 #tagsM {
+  display: flex;
+  margin-left: 29vw;
+  padding-top: 2vw;
+  flex-direction: row;
   align-items: center;
-  text-align: center;
-}
-#GitLogoM {
-  width: 8.3vh;
-  height: 8.3vh;
-  padding: 10px;
-  margin-left: -1.9vh;
-  opacity: 0;
-  filter: brightness(0) invert(0.2);
-  -webkit-transition: opacity 1s ease-in;
-  -moz-transition: opacity 1s ease-in;
-  -ms-transition: opacity 1s ease-in;
-  -o-transition: opacity 1s ease-in;
-  transition: opacity 1s ease-in;
-  transition-delay: 1.5s;
 }
 
+.githubM:hover {
+  filter: brightness(0) invert(0.6);
+  text-decoration: none;
+}
+
+.linkedM:hover {
+  filter: brightness(0) invert(0.6);
+}
+
+.codepenM:hover {
+  filter: brightness(0) invert(0.6);
+}
+
+#GitLogoM {
+  width: 7.3vw;
+  height: 7.3vw;
+  border-radius: 50%;
+  margin-left: -3.2vw;
+  margin-bottom: 1vw;
+  margin-top: -0.1vw;
+  text-decoration: none;
+  filter: brightness(0) invert(0);
+  opacity: 0;
+  display: flex;,
+  flex-direction: column;
+  -webkit-transition: opacity 2s ease-in;
+  -moz-transition: opacity 2s ease-in;
+  -ms-transition: opacity 2s ease-in;
+  -o-transition: opacity 2s ease-in;
+  transition: opacity 1s ease-in;
+  transition-delay: 1s;
+}
+
+
 #GitLogoM:hover {
-  filter: brightness(0) invert(0.5);
+  filter: brightness(0) invert(0.6);
 }
 
 #linkedLogoM {
-  width: 11vh;
-  height: 11vh;
-  padding: 10px;
-  margin-top: -1vh;
+  width: 13.3vw;
+  height: 13.3vw;
+  border-radius: 10px;
+  margin-left: 2vw;
+  color: transparent;
+  display: flex;,
+  flex-direction: column;
+  text-decoration: none;
+  margin-top: -0.99vw;
+  filter: brightness(0%) invert(0);
   opacity: 0;
-  /* padding-right: 1vw; */
-  filter: brightness(0%) invert(0.2);
   -webkit-transition: opacity 1s ease-in;
   -moz-transition: opacity 1s ease-in;
   -ms-transition: opacity 1s ease-in;
   -o-transition: opacity 1s ease-in;
   transition: opacity 1s ease-in;
-  transition-delay: 1.5s;
+  transition-delay: 1s;
 }
 
 #linkedLogoM:hover {
-  filter: brightness(0) invert(0.5);
+  filter: brightness(0) invert(0.6);
+  color: black;
+  text-decoration: none;
 }
 
 #codepenM {
-  width: 8.0vh;
-  height: 8.0vh;
-  padding: 10px;
+  width: 8.3vw;
+  height: 8.3vw;
+  border-radius: 10px;
+  margin-bottom: 0.4vw;
+  display: flex;
+  margin-left: 4vw;
+  margin-right: -3vw;
+  flex-direction: column;
+  margin-top: 0.85vw;
+  filter: brightness(0%) invert(0);
   opacity: 0;
-  /* padding-right: 1vw; */
-  filter: brightness(0%) invert(0.2);
   -webkit-transition: opacity 1s ease-in;
   -moz-transition: opacity 1s ease-in;
   -ms-transition: opacity 1s ease-in;
   -o-transition: opacity 1s ease-in;
   transition: opacity 1s ease-in;
-  transition-delay: 1.5s;
+  transition-delay: 1s;
 }
 
 #codepenM:hover {
-  filter: brightness(0) invert(0.5);
+  filter: brightness(0) invert(0.6);
 }
 
 @keyframes jumpinM {
@@ -254,8 +261,6 @@
         transform: translateY(-300);
     }
 }
-
-
 
 @keyframes rotateM {
   from {

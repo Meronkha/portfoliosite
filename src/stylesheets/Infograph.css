@@ -33,6 +33,7 @@
 #hide {
   color: #e8efef;
 }
+
 @keyframes slide {
     0% {width: 0;}
     100% {width: 5vw; }
@@ -67,4 +68,48 @@
 
 .iconHover:hover img {
   opacity: 0.8;
+}
+
+
+/*
+==========================
+|     Mobile CSS         |
+==========================
+
+
+*/
+.skillsM {
+  position: relative;
+
+}
+@keyframes example {
+    0%   {margin-left: -700px;}
+    100% {margin-left: -1vw;}
+}
+.skillsM div {
+  position: absolute;
+  width: 35vw;
+  height: 12vw;
+  margin-top: -25vw;
+  animation-name: example;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  background-color: #0c1a2d;
+  margin-left: -100px;
+  border-radius: 10px;
+}
+
+.skillsM h1 {
+  text-align: center;
+  padding-left: 0.7vw;
+  font-weight: bold;
+  padding-top: 3.1vw;
+  overflow: hidden;
+  font-size: 5.5vw;
+  color: #e8efef;
+  letter-spacing: 0.1vw;
+  font-family: DinRegular;
+}
+#hide {
+  color: #e8efef;
 }

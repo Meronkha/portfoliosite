@@ -8,7 +8,7 @@ url("./fonts/DIN-Regular.ttf#filename") format("svg");
 }
 
 body {
-  background-color: #e8efef;
+  background-color: white;
   margin: 0;
   padding: 0;
 }
